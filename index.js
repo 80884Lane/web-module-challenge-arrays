@@ -47,8 +47,7 @@ Use the copy function below to do the following:
 
 function copy(originalFlavors){
    let copyFlavors = [...originalFlavors];
-console.log(originalFlavors);
-console.log(copyFlavors);
+    return copyFlavors;
 }
 
 
@@ -65,9 +64,9 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(originalFlavors){
-  if (originalFlavors === 31){
+  if (originalFlavors.length === 31){
       return "TRUE";
-  }else if (originalFlavors !== 31){
+  }else if (originalFlavors.length !== 31){
       return "FALSE";
   }
 }
@@ -103,11 +102,11 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(){
-   let newFlavors = originalFlavors.pop();
-   return newFlavors;
+function removeLastFlavor(arr){
+   arr = originalFlavors.pop();
+   return arr;
 }
-removeLastFlavor();
+removeLastFlavor(originalFlavors);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -120,10 +119,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(array, index){
-    return originalFlavors[2];
-}
-getFlavorByIndex(originalFlavors[2])
+function getFlavorByIndex(arr, ind){
+    return arr[ind];
+}   
+getFlavorByIndex(originalFlavors, 2)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
