@@ -86,9 +86,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(originalFlavors){
-   let sherbert = originalFlavors.unshift("Rainbow Sherbert");
-   return sherbert;
+function addFlavor(newFlav, originalFlavors){
+   newFlav.unshift(originalFlavors)
+   return newFlav;
 }
 
 
@@ -120,10 +120,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(){
+function getFlavorByIndex(array, index){
     return originalFlavors[2];
 }
-
+getFlavorByIndex(originalFlavors[2])
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -139,10 +139,15 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(originalFlavors){
-    return originalFlavors.splice(2, 1);
+function removeFlavorByName(arr, str){
+    for(let i in arr){
+        if(arr[i] === str){
+            arr.splice(i,1)
+        }
+    }
+    return arr
 }
-
+removeFlavorByName(originalFlavors, "Rocky Road")
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
